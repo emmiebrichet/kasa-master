@@ -6,7 +6,7 @@
 
 .container img{
   width: 597px;
-  height: 293px;
+  height: 263px;
 }
 
 
@@ -141,7 +141,7 @@
 
 .logement-rating .star {
   font-size: 20px;
-  color: #e3e3e3;
+  color: #F6F6F673;
 }
 
 .logement-rating .star.filled {
@@ -207,8 +207,8 @@ width: 520px;
   font-size: 46px;
   cursor: pointer;
   z-index: 1;
-  width: 79px;
-  height: 46px;
+  width: 46.68px;;
+  height: 79.2px;
   
 }
 

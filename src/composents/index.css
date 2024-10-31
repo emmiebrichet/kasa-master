@@ -64,7 +64,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  background-color:#E3E3E3 ;
+  background-color:#F6F6F673 ;
   margin-left:100px;
   margin-right:150px;
   padding: 50px;
@@ -111,7 +111,7 @@ footer {
 
 
 .Tab {
-  border: 1px solid #E3E3E3;
+  border: 1px solid #F6F6F673;
   margin-left: 100px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -137,7 +137,7 @@ footer {
 
 
 .collapse {
-  border: 1px solid #ccc;
+  border: 1px solid #F6F6F673;
   margin-left: 50px;
   margin-right: 50px;
  
@@ -151,7 +151,7 @@ footer {
   cursor: pointer;
   padding: 10px;
   background-color: #FF6060;
-  border-bottom: 1px solid #E3E3E3;
+  border-bottom: 1px solid #F6F6F673;
   color: white;
   height: 30px;
   border-radius: 10px;
@@ -161,7 +161,7 @@ footer {
 
 .collapse-content {
   padding: 10px;
-  background-color:#E3E3E3;
+  background-color:#F6F6F673;
   ;
 }
 
