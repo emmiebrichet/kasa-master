@@ -1,0 +1,248 @@
+.container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.container img{
+  width: 597px;
+  height: 293px;
+}
+
+
+.container h1{
+    color: #FF6060;
+    font-size: 36px;
+}
+
+.container p {
+  text-decoration: underline;
+}
+
+.container a{
+  color: #333;
+  font-size: 16px;
+}
+
+.Banner{
+ margin-left: 100px;
+ margin-right: 100px;
+ margin-bottom:50px;
+
+ 
+
+}
+.Banner img{
+    width: 1350px;
+    height: 223px;
+
+}
+
+
+
+/* Conteneur principal */
+.logement-container {
+  width: 1400px;
+  margin: 80px;
+
+  
+}
+
+/* Carrousel */
+.carrousel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+
+
+.carousel-image {
+  width: 1400px;
+  height: 500px;
+  object-fit: cover; /* This ensures the image fills the area while maintaining aspect ratio */
+}
+
+
+.image-container {
+  width: 1400px; /* Match the carousel image width */
+  border-radius: 10px;
+  overflow: hidden; /* To ensure the carousel fits within the set width */
+}
+
+/* Titre et localisation */
+.details h2 {
+  font-size: 24px;
+  color: #ff6060;
+  margin: 0;
+}
+
+.text {
+  display: flex;            /* Disposer les enfants en ligne (horizontalement) */
+  justify-content: space-between; /* Placer les éléments aux extrémités */
+  align-items: center;       /* Centrer les éléments verticalement */
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.details {
+  flex: 1;                   /* Occuper tout l'espace disponible */
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row; /* Aligne le prénom et le nom en colonne */
+  text-align: center; /* Centre le texte */
+}
+
+.hostname{
+  display: flex;
+  flex-direction: column;
+}
+.host p {
+  font-size: 16px; /* Correction de '16p' en '16px' */
+  color: #FF6060;
+  margin: 0; /* Retirer les marges pour que le prénom et le nom soient proches */
+}
+
+.host img {
+  width: 50px; /* Taille de l'image de l'hôte */
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px; /* Espace au-dessus de l'image pour aérer */
+}
+
+
+
+/* Étoiles et tags */
+.stars-and-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag-item {
+  background-color: #ff6060;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.logement-rating .star {
+  font-size: 20px;
+  color: #e3e3e3;
+}
+
+.logement-rating .star.filled {
+  color: #ff6060;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  gap:100px;
+
+}
+
+.tab {
+width: 520px;
+ 
+}
+.tabs .tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background-color: #ff6060;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+ 
+}
+
+.tabs .tab p {
+  margin: 0;
+}
+
+.logement-container .carrousel {
+  position: relative;
+  margin: 50px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  width: 1500px; ;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none; /* Pas de fond */
+  color: white;
+  border: none; 
+  padding: 10px;
+  font-size: 46px;
+  cursor: pointer;
+  z-index: 1;
+  width: 79px;
+  height: 46px;
+  
+}
+
+.prev-button {
+  left: 20px;
+  
+  
+ 
+}
+
+.next-button {
+  right: 20px;
+  
+  
+  
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 50%;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+
+.logement-page .collapse-container {
+  width: 600px;
+}
+
+.about-page .collapse-container {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+  width: 1200px;
+}
