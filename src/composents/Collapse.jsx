@@ -15,10 +15,12 @@ const Collapse = ({ title, children }) => {
             <div className="collapse-header">
                 <h3>{title}</h3>
                 <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className={`toggle-icon ${isOpen ? 'open' : ''}`}
-                    onClick={toggleCollapse} // Déplacement de l'événement ici
-                />
+    icon={faChevronDown}
+    className={`toggle-icon ${isOpen ? 'open' : ''}`}
+    onClick={toggleCollapse}
+    style={{ width: '32px', height: '32px' }}
+/>
+
             </div>
             {isOpen && <div className="collapse-content">{children}</div>}
         </div>

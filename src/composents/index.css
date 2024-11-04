@@ -68,6 +68,7 @@ footer {
   margin-left:100px;
   margin-right:150px;
   padding: 50px;
+  border-radius: 25px;
 }
 
 .card {
@@ -168,7 +169,8 @@ footer {
 
 .collapse-icon {
   margin-left: 10px;
-  width: 24px;
+  width: 32px;
+  height: 32px;
 }
   
 
@@ -176,6 +178,9 @@ footer {
   display: block;
   margin-top: 10px;
   text-align: right;
+  width: 32px;
+  height: 32px;
+
 }
 
 

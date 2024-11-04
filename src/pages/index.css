@@ -208,9 +208,11 @@ width: 520px;
   font-size: 46px;
   cursor: pointer;
   z-index: 1;
-  width: 46.68px;;
-  height: 79.2px;
-  
+  width: 96px;
+  height: 119.64px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .prev-button {
@@ -220,6 +222,10 @@ width: 520px;
  
 }
 
+.icon {
+  width: 96px;
+  height: 119.64px;
+}
 .next-button {
   right: 20px;
   
