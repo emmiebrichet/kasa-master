@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Banner from '../composents/Banner'; // Fixed the spelling from 'composents' to 'components'
-import Card from '../composents/Card'; // Fixed the spelling from 'composents' to 'components'
+import Banner from '../composents/Banner';
+import Card from '../composents/Card'; 
 import bannerImage from '../assets/Section1.png';
 import './index.css';
 
@@ -19,7 +19,7 @@ function Home() {
         return response.json();
       })
       .then(data => setLogements(data))
-      .catch(error => console.error('Fetch error:', error)); // Added error handling
+      .catch(error => console.error('Fetch error:', error)); 
   }, []);
 
   return (
@@ -41,5 +41,5 @@ function Home() {
   );
 }
 
-export default Home; // Don't forget to export your component
+export default Home; 
 
