@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -14,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         {/* Route pour la page d'accueil */}
-        <Route path="/" element={<Home />} />
+        <Route path="/"  element={<Home />} />
         
         {/* Route pour la page à propos */}
         <Route path="/about" element={<About />} />

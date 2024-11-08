@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import Tab from '../composents/Collapse';
+import Collapse from '../composents/Collapse';
 import './index.css';
 import defaultHostImage from '../assets/Host.png';
 
@@ -123,11 +123,11 @@ const Logement = () => {
         </div>
 
         <div className="tabs">
-          <Tab title="Description">
+          <Collapse title="Description">
             <p>{data.description}</p>
-          </Tab>
+          </Collapse>
 
-          <Tab title="Équipements">
+          <Collapse title="Équipements">
             <div className="equipments-container">
               {data.equipments ? (
                 data.equipments.map((equipement, index) => (
@@ -137,7 +137,7 @@ const Logement = () => {
                 <p>Aucun équipement disponible</p>
               )}
             </div>
-          </Tab>
+          </Collapse>
         </div>
       </div>
     </div>
