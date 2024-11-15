@@ -1,15 +1,21 @@
 import React from 'react';
-import bandeau from '../assets/_Section 1 (2).png'; 
+import bannerImage from '../assets/Image source 1 (1).png'; 
 import Collapse from '../composents/Collapse'; 
+import Banner from '../composents/Banner';
 import './index.css';
 
 function About() {
   return (
     <div className="about-page">
+      {/* Section de la bannière */}
       <div className="Banner">
-        <img src={bandeau} alt="bandeau" />
+        <Banner 
+          image={bannerImage} 
+        
+        />
       </div>
 
+      {/* Section des collapses */}
       <div className="collapse-section">
         <Collapse title="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
@@ -24,7 +30,7 @@ function About() {
         </Collapse>
 
         <Collapse title="Sécurité">
-          <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organispns également des ateliers sur la sécurité domestiques pour nos hôtes. </p>
+          <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.</p>
         </Collapse>
       </div>
     </div>
@@ -32,3 +38,4 @@ function About() {
 }
 
 export default About;
+

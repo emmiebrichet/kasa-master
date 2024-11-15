@@ -1,13 +1,15 @@
 import React from 'react';
-import footerImage from '../assets/D_Footer.png'; 
+import footerlogo from '../assets/LOGO (1).png'; 
 import './index.css';
 
 
 function Footer() {
   return (
     <footer>
-      <img src={footerImage} alt="Footer de Kasa" style={{ width: '100%', height: 'auto' }} />
-      
+      <div className="foot">
+      <img src={footerlogo} alt="logo de Kasa"  />
+      <p>© 2020 Kasa. All rights reserved</p>
+      </div>
     </footer>
   );
 }

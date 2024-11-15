@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Banner from '../composents/Banner';
 import Card from '../composents/Card'; 
-import bannerImage from '../assets/Section1.png';
+import bannerImage from '../assets/Image source 1 (1).png';
 import './index.css';
 
 function Home() {
   const [logements, setLogements] = useState([]);
-  
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +24,11 @@ function Home() {
   return (
     <div>
       <div className="Banner">
-        <Banner image={bannerImage} altText="Bienvenue sur notre site de propriétés" />
+        <Banner 
+          image={bannerImage} 
+          altText="Bienvenue sur notre site de propriétés" 
+          text="Chez vous, partout et ailleurs" 
+        />
       </div>
       <div className="property-list">
         {logements.map(property => (
@@ -41,5 +44,4 @@ function Home() {
   );
 }
 
-export default Home; 
-
+export default Home;

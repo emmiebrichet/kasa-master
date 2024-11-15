@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Collapse from '../composents/Collapse';
@@ -8,8 +8,8 @@ import defaultHostImage from '../assets/Host.png';
 
 const Logement = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -22,11 +22,11 @@ const Logement = () => {
         const result = await response.json();
         setData(result);
       } catch (error) {
-        setError(error.message);
+        navigate('/error'); // Redirection en cas d'erreur
       }
     };
     fetchData();
-  }, [id]);
+  }, [id, navigate]);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -40,12 +40,9 @@ const Logement = () => {
     );
   };
 
-  if (error) {
-    return <p>Erreur: {error}</p>;
-  }
-
+  // Retourne `null` si les données ne sont pas encore chargées
   if (!data) {
-    return <p>Chargement...</p>;
+    return null;
   }
 
   return (
@@ -62,16 +59,15 @@ const Logement = () => {
                 />
                 {data.pictures.length > 1 && (
                   <>
-                 <button className="prev-button" onClick={prevImage} aria-label="Image précédente">
-                   <FontAwesomeIcon icon={faChevronLeft} className="icon" />
-                  </button>
-                  <button className="next-button" onClick={nextImage} aria-label="Image suivante">
-                    <FontAwesomeIcon icon={faChevronRight} className="icon" />
-                  </button>
-                  <p className="image-counter">
-                    {currentImageIndex + 1} / {data.pictures.length}
-                </p>
-
+                    <button className="prev-button" onClick={prevImage} aria-label="Image précédente">
+                      <FontAwesomeIcon icon={faChevronLeft} className="icon" />
+                    </button>
+                    <button className="next-button" onClick={nextImage} aria-label="Image suivante">
+                      <FontAwesomeIcon icon={faChevronRight} className="icon" />
+                    </button>
+                    <p className="image-counter">
+                      {currentImageIndex + 1} / {data.pictures.length}
+                    </p>
                   </>
                 )}
               </>
@@ -98,7 +94,10 @@ const Logement = () => {
                 <p>Nom non disponible</p>
               )}
             </div>
-            <img src={data.host && data.host.picture ? data.host.picture : defaultHostImage} alt={`${data.host && data.host.name ? data.host.name : 'Hôte'}'s picture`} />
+            <img
+              src={data.host && data.host.picture ? data.host.picture : defaultHostImage}
+              alt={`${data.host && data.host.name ? data.host.name : 'Hôte'}'s picture`}
+            />
           </div>
         </div>
 
