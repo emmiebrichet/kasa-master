@@ -317,8 +317,10 @@ nav a {
   width: 100%;
  
 }
-
-.collapse-container{
+.logement-container {
+  width: 100%;
   margin: 0;
+
 }
+
 }
