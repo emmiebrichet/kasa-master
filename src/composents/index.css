@@ -258,7 +258,9 @@ footer {
 
 
   header {
-    margin:20px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:20px;
     padding: 0;
   }
 
@@ -295,7 +297,7 @@ nav a {
   overflow: hidden; /* Évite que le contenu dépasse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
   transition: transform 0.3s ease; /* Animation au survol */
-  margin: 20px;
+  margin: 0px;
 }
 
 .property-list {
@@ -303,11 +305,13 @@ nav a {
   padding: 0;
   border-radius: 25px;
   background-color: white;
+  gap: 20px;
 }
 
 
 .Banner{
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .collapse {
@@ -321,6 +325,10 @@ nav a {
   width: 100%;
   margin: 0%;
 
+}
+
+Footer{
+  margin-top: 20px;
 }
 
 }
