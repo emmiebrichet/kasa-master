@@ -77,91 +77,85 @@ const Logement = () => {
           </div>
         </div>
         <div className="text">
-  {/* Flexbox 1 : details et host */}
-  <div className="details-and-host">
-    <div className="details">
-      <h2>{data.title}</h2>
-      <p>{data.location}</p>
-    </div>
-    <div className="host">
-      <div className="hostname">
-        {data.host?.name ? (
-          <>
-            <p>{data.host.name.split(' ')[0]}</p>
-            <p>{data.host.name.split(' ').slice(1).join(' ')}</p>
-          </>
-        ) : (
-          <p>Nom non disponible</p>
-        )}
-      </div>
-      <img
-        src={data.host?.picture || defaultHostImage}
-        alt={`Photo de l'hôte`}
-      />
-    </div>
-  </div>
-
-  {/* Flexbox 2 : tags et logement-rating */}
-  <div className="tags-and-rating">
-    <div className="tags">
-      {data.tags && data.tags.length > 0 ? (
-        data.tags.map((tag, index) => (
-          <span key={index} className="tag-item">{tag}</span>
-        ))
-      ) : (
-        <p>Aucun tag disponible</p>
-      )}
-    </div>
-    <div className="logement-rating">
-      {[...Array(5)].map((_, index) => (
-        <span
-          key={index}
-          className={index < data.rating ? 'star filled' : 'star'}
-        >
-          &#9733;
-        </span>
-      ))}
-    </div>
-  </div>
-
-  {/* Flexbox 3 : host et logement-rating */}
-  <div className="host-and-rating">
-    <div className="host-mobile">
-      <div className="hostname-mobile">
-        {data.host?.name ? (
-          <>
-            <p>{data.host.name.split(' ')[0]}</p>
-            <p>{data.host.name.split(' ').slice(1).join(' ')}</p>
-          </>
-        ) : (
-          <p>Nom non disponible</p>
-        )}
-      </div>
-      <img
-        src={data.host?.picture || defaultHostImage}
-        alt={`Photo de l'hôte`}
-      />
-    </div>
-    <div className="logement-rating-mobile">
-      {[...Array(5)].map((_, index) => (
-        <span
-          key={index}
-          className={index < data.rating ? 'star filled' : 'star'}
-        >
-          &#9733;
-        </span>
-      ))}
-    </div>
-  </div>
-</div>
-
-
-
+          {}
+          <div className="details-and-host">
+            <div className="details">
+              <h2>{data.title}</h2>
+              <p>{data.location}</p>
+            </div>
+            <div className="host">
+              <div className="hostname">
+              {data.host?.name ? (
+                <>
+                  <p>{data.host.name.split(' ')[0]}</p>
+                 <p>{data.host.name.split(' ').slice(1).join(' ')}</p>
+                </>
+              ) : (
+              <p>Nom non disponible</p>
+              )}
+            </div>
+             <img
+              src={data.host?.picture || defaultHostImage}
+              alt={`Photo de l'hôte`}
+            />
+          </div>
+        </div>
+        {}
+        <div className="tags-and-rating">
+          <div className="tags">
+            {data.tags && data.tags.length > 0 ? (
+              data.tags.map((tag, index) => (
+                <span key={index} className="tag-item">{tag}</span>
+              ))
+            ) : (
+             <p>Aucun tag disponible</p>
+            )}
+          </div>
+          <div className="logement-rating">
+            {[...Array(5)].map((_, index) => (
+              <span
+               key={index}
+                className={index < data.rating ? 'star filled' : 'star'}
+              >
+                &#9733;
+            </span>
+            ))}
+          </div>
+        </div>
+         {}
+          <div className="host-and-rating">
+            <div className="host-mobile">
+             <div className="hostname-mobile">
+                {data.host?.name ? (
+                  <>
+                    <p>{data.host.name.split(' ')[0]}</p>
+                   <p>{data.host.name.split(' ').slice(1).join(' ')}</p>
+                  </>
+                ) : (
+                  <p>Nom non disponible</p>
+                )}
+              </div>
+              <img
+                src={data.host?.picture || defaultHostImage}
+                alt={`Photo de l'hôte`}
+             />
+            </div>
+            <div className="logement-rating-mobile">
+              {[...Array(5)].map((_, index) => (
+                <span
+                  key={index}
+                  className={index < data.rating ? 'star filled' : 'star'}
+                  >
+                 &#9733;
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="tabs">
           <Collapse title="Description">
             <p>{data.description}</p>
           </Collapse>
-
           <Collapse title="Équipements">
             <div className="equipments-container">
               {data.equipments ? (

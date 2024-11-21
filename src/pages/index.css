@@ -301,131 +301,122 @@ width: 520px;
   .icon {
     width: 24px;
     height: 24px;
-}
-.next-button {
-  right: 5px;
-}
+  }
+  .next-button {
+    right: 5px;
+  }
 
-.prev-button {
-  left: 5px;
-}
+  .prev-button {
+    left: 5px;
+  }
 
   .logement-container .carrousel {
-  margin: 20px;
-}
+    margin: 20px;
+  }
   .text {display: flex;
     flex-direction: column;
-    
-    margin: 20px;
-    
+    margin: 20px;  
   }
   .stars-and-tags{
     margin-left: 20px;
     margin-right: 20px;
-}
-  
+  }
   .tabs {
-    margin: 20px;}
-
-    .about-page .collapse-container {
+    margin: 20px; 
+  }
+  .about-page .collapse-container {
     margin: 20px;
-      width: 100%;
-    }
+    width: 100%;
+  }
 
-    .container h1 {
-      color: #FF6060;
-      font-size: 20px;
+  .container h1 {
+    color: #FF6060;
+    font-size: 20px;
   }
   .container img {
     margin: 50px;
     width: 198px;
     height: 99px;
-}
-.container h1 {
+  }
+  .container h1 {
+    font-size: 18px;
+    margin: 100px;
+  }
+  .container a {
+    font-size: 14px;
+  }
+  .logement-rating{
+    display: none;
+  }
+  .host-and-rating {
+    display: flex;
+    order: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacement entre les éléments */
+  }
+  .host{
+    display: none;
+  }
+  .host-mobile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row; /* Aligne le prénom et le nom en colonne */
+    text-align: center; /* Centre le texte */
+    order: 2;
+  }
 
-  font-size: 18px;
-  margin: 100px;
-}
-.container a {
-  font-size: 14px;
-}
-.logement-rating{
-  display: none;
-}
+  .hostname-mobile{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .host-mobile p {
+    font-size: 16px; /* Correction de '16p' en '16px' */
+    color: #FF6060;
+    margin: 0; /* Retirer les marges pour que le prénom et le nom soient proches */
+  }
+  .logement-rating-mobile {
+    display: flex;
+    gap: 5px;
+    margin-left: 20px;
+    order: 1;
+  }
 
+  .logement-rating-mobile .star {
+    font-size: 20px;
+    color: #F6F6F673;
+  }
 
-.host-and-rating {
-  display: flex;
-  order: 0;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px; /* Espacement entre les éléments */
-}
-.host{
-  display: none;
-}
+  .logement-rating-mobile .star.filled {
+    color: #ff6060;
+  }
 
-.host-mobile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-direction: row; /* Aligne le prénom et le nom en colonne */
-  text-align: center; /* Centre le texte */
-  order: 2;
-}
+  .host-mobile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Rendre l'image ronde */
+    object-fit: cover; /* Ajuster l'image */
+  } 
 
-.hostname-mobile{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.host-mobile p {
-  font-size: 16px; /* Correction de '16p' en '16px' */
-  color: #FF6060;
-  margin: 0; /* Retirer les marges pour que le prénom et le nom soient proches */
-}
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap:20px;
 
-
-.logement-rating-mobile {
-  display: flex;
-  gap: 5px;
-  margin-left: 20px;
-  order: 1;
-}
-
-.logement-rating-mobile .star {
-  font-size: 20px;
-  color: #F6F6F673;
-}
-
-.logement-rating-mobile .star.filled {
-  color: #ff6060;
-}
-
-.host-mobile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Rendre l'image ronde */
-  object-fit: cover; /* Ajuster l'image */
-}
-
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  gap:20px;
-
-}
-.about-page .collapse-container {
+  }
+  .about-page .collapse-container {
     margin-left: 20px;
     margin-right: 20px;
     width: 93%;
   }
   .logement-page .collapse-container {
     width: 100%;
-}
+  }
 }
 
